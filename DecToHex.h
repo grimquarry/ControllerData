@@ -3,7 +3,7 @@
     DecToHex.h
     Purpose: Header file for a class that converts decimal integers to a Hexidecimal string.
     @author Jeremiah Kellogg
-    @version 1.0.0 2020-06-14
+    @version 1.0.1 2020-08-30
 */
 #pragma once
 #include <string>  //Dynamically linked from Standard Library
@@ -24,11 +24,7 @@ public:
 
 private:
   int divisor;
-	int dividend;
-	int quotient;
-	int remainder;
 	std::vector<char> hexDigits; //Container for storing individual digits of the hex value
-	std::string value; //The hex value to be returned.
   char hexTable[16] = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
 											'9', 'a', 'b', 'c', 'd', 'e', 'f'};
 };

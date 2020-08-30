@@ -3,14 +3,13 @@
     DecToHex.cpp
     Purpose: Header file for a class that converts decimal integers to a Hexidecimal string.
     @author Jeremiah Kellogg
-    @version 1.0.0 2020-06-14
+    @version 1.0.1 2020-08-30
 */
 #include "DecToHex.h"
 
 DecToHex::DecToHex()
 {
   divisor = 16; //divisor set to 16 for hexidecimal values
-	remainder = 0;
 }
 
 DecToHex::~DecToHex() { }
@@ -18,7 +17,11 @@ DecToHex::~DecToHex() { }
 //Returns a Hexidecimal string when passed an integer.
 std::string DecToHex::ConvertToHex(int dec)
 {
-  dividend = dec;
+  std::string value;
+  int remainder = 0;
+  int dividend = dec;
+  int quotient;
+
   while(quotient != 0)
 	{
       quotient = dividend/divisor;
